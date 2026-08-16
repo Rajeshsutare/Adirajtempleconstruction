@@ -4,7 +4,7 @@ export const TEMPLE_DATA = {
     companyName: 'Aadiraj Mandir Nirman',
     tagline: 'Where Devotion Takes Shape in Stone',
     subtitle: 'Creating timeless temples that reflect faith, tradition, craftsmanship and structural excellence.',
-    phone: '+919876543210',
+    phone: '+919763101558',
     formattedPhone: '+91 9763101558',
     email: 'aadirajtempleconstruction@gmail.com',
     address: 'Landgewadi, Maharashtra 431708, India',
@@ -18,7 +18,7 @@ export const TEMPLE_DATA = {
         facebook: 'https://www.facebook.com/profile.php?id=100089629756142&mibextid=ZbWKwL',
         youtube: 'https://youtube.com/@shreemandirnirman',
         twitter: 'https://twitter.com/Adiraj_temple?t=t8cZ44b8xqU83L4vpR-SZg&s=09',
-        whatsapp: 'https://wa.me/919876543210?text=Namaste!%20I%20am%20interested%20in%20Temple%20Construction%20services.'
+        whatsapp: 'https://wa.me/919763101558?text=Namaste!%20I%20am%20interested%20in%20Temple%20Construction%20services.'
     },
 
     emailJsConfig: {
