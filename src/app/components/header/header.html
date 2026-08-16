@@ -1,0 +1,52 @@
+<header [class.scrolled]="isScrolled()" class="site-header">
+    <div class="header-container">
+        <!-- Logo -->
+        <a (click)="navigateTo('home')" class="brand-logo">
+            <i class="fa-solid fa-gopuram logo-icon"></i>
+            <div class="brand-text">
+                <span class="company-name">{{ templeData.companyName }}</span>
+                <span class="company-subtext">Sacred Architecture</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <a (click)="navigateTo('home')">Home</a>
+            <a (click)="navigateTo('about')">About Us</a>
+            <a (click)="navigateTo('founder')">Master Craftsman</a>
+            <a (click)="navigateTo('services')">Services</a>
+            <a (click)="navigateTo('gallery')">Gallery</a>
+            <a (click)="navigateTo('testimonials')">Testimonials</a>
+            <a (click)="navigateTo('location')">Location</a>
+            <a (click)="navigateTo('contact')">Contact</a>
+        </nav>
+
+        <!-- CTA Action -->
+        <div class="header-actions">
+            <button (click)="openEnquiry()" class="btn-enquire">
+                <i class="fa-solid fa-om"></i> Enquire Now
+            </button>
+
+            <button (click)="toggleMobileMenu()" class="mobile-toggle" [attr.aria-expanded]="isMobileOpen()">
+                <i [class]="isMobileOpen() ? 'fa-solid fa-xmark' : 'fa-solid fa-bars-staggered'"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="mobile-menu" [class.open]="isMobileOpen()">
+        <nav>
+            <a (click)="navigateTo('home')"><i class="fa-solid fa-house"></i> Home</a>
+            <a (click)="navigateTo('about')"><i class="fa-solid fa-landmark"></i> About Us</a>
+            <a (click)="navigateTo('founder')"><i class="fa-solid fa-user-tie"></i> Master Craftsman</a>
+            <a (click)="navigateTo('services')"><i class="fa-solid fa-hammer"></i> Services</a>
+            <a (click)="navigateTo('gallery')"><i class="fa-solid fa-images"></i> Gallery</a>
+            <a (click)="navigateTo('testimonials')"><i class="fa-solid fa-comment-dots"></i> Testimonials</a>
+            <a (click)="navigateTo('location')"><i class="fa-solid fa-location-dot"></i> Visit Us</a>
+            <a (click)="navigateTo('contact')"><i class="fa-solid fa-phone"></i> Contact</a>
+            <button (click)="openEnquiry(); toggleMobileMenu()" class="mobile-cta-btn">
+                Enquire Now
+            </button>
+        </nav>
+    </div>
+</header>

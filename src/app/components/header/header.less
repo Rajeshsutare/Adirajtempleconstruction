@@ -1,0 +1,651 @@
+@import '../../styles/_variables.less';
+@import '../../styles/_mixins.less';
+
+/* =========================================================
+   Site Header
+   ========================================================= */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 1000;
+
+    padding: 1.25rem 0;
+
+    background: linear-gradient(180deg,
+            rgba(20, 10, 5, 0.8) 0%,
+            rgba(20, 10, 5, 0) 100%);
+
+    transition:
+        background-color 0.3s ease,
+        padding 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    /* Prevent content from overflowing on small screens */
+    overflow: visible;
+
+    &.scrolled {
+        padding: 0.7rem 0;
+
+        background: rgba(43, 27, 18, 0.96);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+
+        box-shadow: @shadow-md;
+    }
+}
+
+/* =========================================================
+   Header Container
+   ========================================================= */
+
+.header-container {
+    .container-custom();
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    min-height: 52px;
+
+    gap: 1.5rem;
+    padding-left: 0 !important;
+}
+
+/* =========================================================
+   Brand / Logo
+   ========================================================= */
+
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    gap: 0.7rem;
+
+    min-width: 0;
+
+    color: @cream;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &:focus-visible {
+        outline: 2px solid @gold;
+        outline-offset: 5px;
+        border-radius: 4px;
+    }
+
+    .logo-icon {
+        flex: 0 0 auto;
+
+        font-size: 2rem;
+        line-height: 1;
+
+        color: @gold;
+
+        filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.45));
+
+        transition: transform 0.3s ease;
+    }
+
+    .brand-text {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 0;
+
+        .company-name {
+            font-family: @font-heading;
+
+            font-size: 1.35rem;
+            font-weight: 700;
+
+            line-height: 1.15;
+
+            color: @cream;
+
+            letter-spacing: 0.5px;
+
+            white-space: nowrap;
+
+            transition: color 0.25s ease;
+        }
+
+        .company-subtext {
+            margin-top: 0.15rem;
+
+            font-size: 0.68rem;
+            font-weight: 500;
+
+            line-height: 1.2;
+
+            color: @saffron;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            white-space: nowrap;
+        }
+    }
+
+    &:hover {
+        .logo-icon {
+            transform: scale(1.05);
+        }
+
+        .company-name {
+            color: @gold;
+        }
+    }
+}
+
+/* =========================================================
+   Desktop Navigation
+   ========================================================= */
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(1rem, 2vw, 1.8rem);
+
+    margin-left: auto;
+
+    a {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+
+        min-height: 40px;
+
+        padding: 0.25rem 0;
+
+        color: @cream;
+
+        font-size: 0.92rem;
+        font-weight: 500;
+
+        line-height: 1.2;
+
+        text-decoration: none;
+
+        white-space: nowrap;
+
+        transition:
+            color 0.25s ease,
+            opacity 0.25s ease;
+
+        /* Animated underline */
+        &::after {
+            content: '';
+
+            position: absolute;
+
+            left: 0;
+            bottom: 2px;
+
+            width: 0;
+            height: 2px;
+
+            background: @gold;
+
+            border-radius: 2px;
+
+            transition: width 0.25s ease;
+        }
+
+        &:hover {
+            color: @gold;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid @gold;
+            outline-offset: 5px;
+
+            border-radius: 2px;
+        }
+
+        &.active {
+            color: @gold;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Hide desktop navigation on tablet/mobile */
+    @media (max-width: @screen-lg) {
+        display: none;
+    }
+}
+
+/* =========================================================
+   Header Actions
+   ========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    gap: 0.75rem;
+
+    /* =======================================================
+     Enquiry Button
+     ======================================================= */
+
+    .btn-enquire {
+        .btn-primary-style();
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 42px;
+
+        padding: 0.65rem 1.25rem;
+
+        font-size: 0.88rem;
+        font-weight: 600;
+
+        white-space: nowrap;
+
+        &:focus-visible {
+            outline: 2px solid @gold;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: @screen-sm) {
+            display: none;
+        }
+    }
+
+    /* =======================================================
+     Mobile Menu Toggle
+     ======================================================= */
+
+    .mobile-toggle {
+        display: none;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        flex: 0 0 44px;
+
+        padding: 0;
+
+        background: rgba(20, 10, 5, 0.25);
+
+        border: 1px solid @gold;
+        border-radius: @radius-sm;
+
+        color: @gold;
+
+        font-size: 1.2rem;
+
+        cursor: pointer;
+
+        transition:
+            background-color 0.25s ease,
+            color 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease;
+
+        &:hover {
+            background: @gold;
+            color: @dark;
+
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+
+        &:focus-visible {
+            outline: 2px solid @cream;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: @screen-lg) {
+            display: inline-flex;
+        }
+    }
+}
+
+/* =========================================================
+   Mobile Menu
+   ========================================================= */
+
+.mobile-menu {
+    /*
+   * Keep the element in the DOM but hide it visually.
+   * This allows us to animate the opening/closing.
+   */
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 1.25rem;
+
+    background: rgba(43, 27, 18, 0.98);
+
+    border-bottom: 1px solid transparent;
+
+    box-shadow: none;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.35s ease,
+        padding 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+    &.open {
+        max-height: 600px;
+
+        padding: 1.25rem;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+
+        border-bottom-color: rgba(212, 175, 55, 0.4);
+
+        box-shadow: @shadow-lg;
+    }
+
+    /* =======================================================
+     Mobile Navigation
+     ======================================================= */
+
+    nav {
+        display: flex;
+        flex-direction: column;
+
+        gap: 0.25rem;
+
+        a {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            min-height: 48px;
+
+            gap: 0.75rem;
+
+            padding: 0.7rem 0;
+
+            color: @cream;
+
+            font-size: 1rem;
+            font-weight: 500;
+
+            line-height: 1.3;
+
+            text-decoration: none;
+
+            border-bottom: 1px solid rgba(255,
+                    248,
+                    231,
+                    0.08);
+
+            transition:
+                color 0.25s ease,
+                padding-left 0.25s ease,
+                background-color 0.25s ease;
+
+            &:hover {
+                color: @gold;
+
+                padding-left: 0.35rem;
+            }
+
+            &:focus-visible {
+                outline: 2px solid @gold;
+                outline-offset: 2px;
+
+                border-radius: 4px;
+            }
+
+            &.active {
+                color: @gold;
+            }
+
+            i {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 24px;
+                min-width: 24px;
+
+                color: @gold;
+
+                font-size: 1rem;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        /* =====================================================
+       Mobile CTA
+       ===================================================== */
+
+        .mobile-cta-btn {
+            .btn-primary-style();
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+
+            min-height: 46px;
+
+            margin-top: 1rem;
+
+            padding: 0.75rem 1rem;
+
+            font-size: 0.95rem;
+            font-weight: 600;
+
+            text-align: center;
+
+            &:focus-visible {
+                outline: 2px solid @gold;
+                outline-offset: 3px;
+            }
+        }
+    }
+}
+
+/* =========================================================
+   Tablet Adjustments
+   ========================================================= */
+
+@media (max-width: @screen-lg) {
+    .site-header {
+        padding: 1rem 0;
+
+        &.scrolled {
+            padding: 0.65rem 0;
+        }
+    }
+
+    .header-container {
+        min-height: 48px;
+    }
+
+    .brand-logo {
+        .logo-icon {
+            font-size: 1.8rem;
+        }
+
+        .brand-text {
+            .company-name {
+                font-size: 1.2rem;
+            }
+
+            .company-subtext {
+                font-size: 0.62rem;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+}
+
+/* =========================================================
+   Mobile Adjustments
+   ========================================================= */
+
+@media (max-width: @screen-sm) {
+    .site-header {
+        padding: 0.85rem 0;
+
+        &.scrolled {
+            padding: 0.6rem 0;
+        }
+    }
+
+    .header-container {
+        gap: 0.75rem;
+    }
+
+    .brand-logo {
+        gap: 0.55rem;
+
+        .logo-icon {
+            font-size: 1.6rem;
+        }
+
+        .brand-text {
+            .company-name {
+                font-size: 1rem;
+            }
+
+            .company-subtext {
+                font-size: 0.55rem;
+
+                letter-spacing: 1.1px;
+            }
+        }
+    }
+
+    .header-actions {
+        gap: 0.5rem;
+
+        .mobile-toggle {
+            width: 42px;
+            height: 42px;
+
+            flex-basis: 42px;
+        }
+    }
+
+    .mobile-menu {
+        &.open {
+            padding: 1rem;
+        }
+
+        nav {
+            a {
+                font-size: 0.95rem;
+            }
+        }
+    }
+}
+
+/* =========================================================
+   Very Small Mobile Devices
+   ========================================================= */
+
+@media (max-width: 360px) {
+    .brand-logo {
+        .logo-icon {
+            display: none;
+        }
+
+        .brand-text {
+            .company-name {
+                font-size: 0.95rem;
+            }
+
+            .company-subtext {
+                font-size: 0.5rem;
+            }
+        }
+    }
+
+    .header-actions {
+        .mobile-toggle {
+            width: 40px;
+            height: 40px;
+
+            flex-basis: 40px;
+        }
+    }
+}
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-header,
+    .brand-logo,
+    .logo-icon,
+    .company-name,
+    .desktop-nav a,
+    .desktop-nav a::after,
+    .btn-enquire,
+    .mobile-toggle,
+    .mobile-menu,
+    .mobile-menu nav a {
+        transition: none;
+    }
+
+    .logo-icon,
+    .mobile-toggle,
+    .mobile-menu {
+        transform: none;
+    }
+}

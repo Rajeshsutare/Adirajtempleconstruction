@@ -1,0 +1,106 @@
+@import '../../styles/_variables.less';
+@import '../../styles/_mixins.less';
+
+.testimonials-section {
+    .section-padding();
+    background: @cream;
+}
+
+.testimonials-container {
+    .container-custom();
+    width: auto !important;
+}
+
+.testimonial-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: @white;
+    border-radius: @radius-md;
+    padding: 3rem 2rem 2rem;
+    box-shadow: @shadow-md;
+    border: 1px solid rgba(198, 138, 43, 0.2);
+    text-align: center;
+    position: relative;
+
+    .stars {
+        color: @gold;
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .review-text {
+        font-family: @font-heading;
+        font-size: 1.25rem;
+        color: @dark;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        font-style: italic;
+
+        @media (max-width: @screen-sm) {
+            font-size: 1.05rem;
+        }
+    }
+
+    .client-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid @gold;
+        }
+
+        .client-name {
+            font-family: @font-heading;
+            font-size: 1.1rem;
+            color: @primary;
+            margin: 0;
+            text-align: left;
+        }
+
+        .client-role {
+            font-size: 0.82rem;
+            color: @text-light;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    .carousel-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        .ctrl-btn {
+            background: @background;
+            border: 1px solid @gold;
+            color: @primary;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: @transition;
+
+            &:hover {
+                background: @secondary;
+                color: @white;
+            }
+        }
+
+        .slide-count {
+            font-size: 0.85rem;
+            color: @text-light;
+            font-weight: 600;
+        }
+    }
+}

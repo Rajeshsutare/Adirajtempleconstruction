@@ -1,0 +1,166 @@
+@import '../../styles/_variables.less';
+@import '../../styles/_mixins.less';
+
+.services-section {
+    .section-padding();
+    background: @cream;
+}
+
+.services-container {
+    .container-custom();
+    width: auto !important;
+}
+
+.section-header-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+
+    .section-badge {
+        color: @saffron;
+        font-weight: 600;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .section-title {
+        font-family: @font-heading;
+        font-size: clamp(2rem, 4vw, 2.6rem);
+        color: @dark;
+        margin: 0.5rem 0;
+    }
+
+    .section-subtitle {
+        color: @text-light;
+        font-size: 1.05rem;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: @screen-lg) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: @screen-sm) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    background: @white;
+    border-radius: @radius-md;
+    overflow: hidden;
+    box-shadow: @shadow-sm;
+    border: 1px solid rgba(198, 138, 43, 0.15);
+    transition: @transition;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: @shadow-md;
+        border-color: @gold;
+
+        .card-image img {
+            transform: scale(1.06);
+        }
+    }
+
+    .card-image {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: @transition;
+        }
+
+        .card-icon-floating {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            width: 46px;
+            height: 46px;
+            background: @dark;
+            color: @gold;
+            border: 1px solid @gold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: @shadow-sm;
+        }
+    }
+
+    .card-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        h3 {
+            font-family: @font-heading;
+            font-size: 1.25rem;
+            color: @dark;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: @text-light;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+            flex-grow: 1;
+
+            li {
+                font-size: 0.82rem;
+                color: @text;
+                margin-bottom: 0.4rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                i {
+                    color: @secondary;
+                }
+            }
+        }
+
+        .btn-card-enquire {
+            width: 100%;
+            background: transparent;
+            border: 1px solid @gold;
+            color: @primary;
+            padding: 0.7rem 1rem;
+            border-radius: @radius-sm;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: @transition;
+
+            &:hover {
+                background: @saffron;
+                color: @white;
+                border-color: @saffron;
+            }
+        }
+    }
+}

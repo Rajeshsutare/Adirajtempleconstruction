@@ -1,0 +1,113 @@
+@import '../../styles/_variables.less';
+@import '../../styles/_mixins.less';
+
+.contact-section {
+    .section-padding();
+    background: @cream;
+}
+
+.contact-container {
+    .container-custom();
+    width: auto !important;
+}
+
+.contact-banner {
+    background: linear-gradient(135deg, @dark 0%, @primary 100%);
+    border-radius: @radius-md;
+    padding: 3.5rem 2.5rem;
+    color: @cream;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: @shadow-lg;
+    border: 1px solid @gold;
+    margin-bottom: 3rem;
+
+    @media (max-width: @screen-lg) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-text {
+        max-width: 600px;
+
+        h2 {
+            font-family: @font-heading;
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            color: @gold;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: rgba(255, 248, 231, 0.85);
+            font-size: 1.05rem;
+        }
+    }
+
+    .banner-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .btn-call {
+            .btn-primary-style();
+        }
+
+        .btn-enquire {
+            .btn-secondary-style();
+        }
+    }
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+
+    @media (max-width: @screen-sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-card {
+        background: @white;
+        border: 1px solid rgba(198, 138, 43, 0.2);
+        border-radius: @radius-sm;
+        padding: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: @dark;
+        font-weight: 600;
+        transition: @transition;
+
+        i {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: @shadow-sm;
+            border-color: @gold;
+        }
+
+        &.wa i {
+            color: #25D366;
+        }
+
+        &.ig i {
+            color: #E4405F;
+        }
+
+        &.fb i {
+            color: #1877F2;
+        }
+
+        &.yt i {
+            color: #FF0000;
+        }
+    }
+}

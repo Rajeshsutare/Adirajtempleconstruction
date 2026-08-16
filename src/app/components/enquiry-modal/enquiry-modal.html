@@ -1,0 +1,98 @@
+<div *ngIf="navService.isModalOpen()" class="modal-backdrop" (click)="closeModal()" (keydown.escape)="closeModal()"
+    tabindex="-1">
+    <div class="modal-card" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
+        <!-- Close Button -->
+        <button type="button" class="modal-close" aria-label="Close enquiry modal" (click)="closeModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-header">
+            <i class="fa-solid fa-om modal-icon"></i>
+
+            <h2>Temple Construction Enquiry</h2>
+
+            <p>
+                Fill out the details below for a customized architectural blueprint
+                &amp; cost estimate.
+            </p>
+        </div>
+
+        <!-- Success Message -->
+        <div *ngIf="submitStatus() === 'success'" class="status-alert success">
+            <i class="fa-solid fa-circle-check"></i>
+            {{ statusMessage() }}
+        </div>
+
+        <!-- Error Message -->
+        <div *ngIf="submitStatus() === 'error'" class="status-alert error">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            {{ statusMessage() }}
+        </div>
+
+        <!-- Reactive Form -->
+        <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+
+                <input id="name" type="text" formControlName="name" placeholder="e.g. Shri Rajesh Varma"
+                    [class.invalid]="isFieldInvalid('name')" />
+
+                <span *ngIf="isFieldInvalid('name')" class="err-text">
+                    Full name is required.
+                </span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+
+                <input id="email" type="email" formControlName="email" placeholder="e.g. rajesh@example.com"
+                    [class.invalid]="isFieldInvalid('email')" />
+
+                <span *ngIf="isFieldInvalid('email')" class="err-text">
+                    Enter a valid email address.
+                </span>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Contact Number (10 Digits) *</label>
+
+                <input id="phone" type="tel" formControlName="phone" placeholder="e.g. 9876543210"
+                    [class.invalid]="isFieldInvalid('phone')" />
+
+                <span *ngIf="isFieldInvalid('phone')" class="err-text">
+                    Enter a valid 10-digit mobile number.
+                </span>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Requirements / Vision *</label>
+
+                <textarea id="description" rows="4" formControlName="description"
+                    placeholder="Please describe your temple project location, dimensions, preferred stone type, and expected timeline..."
+                    [class.invalid]="isFieldInvalid('description')"></textarea>
+
+                <span *ngIf="isFieldInvalid('description')" class="err-text">
+                    Please describe your requirements.
+                </span>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" [disabled]="isSubmitting()" class="btn-submit">
+                <span *ngIf="!isSubmitting()">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Enquiry
+                </span>
+
+                <span *ngIf="isSubmitting()">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    Sending...
+                </span>
+            </button>
+        </form>
+    </div>
+</div>

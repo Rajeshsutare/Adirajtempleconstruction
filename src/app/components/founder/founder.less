@@ -1,0 +1,184 @@
+@import '../../styles/_variables.less';
+@import '../../styles/_mixins.less';
+
+.founder-section {
+    .section-padding();
+    background: @background;
+    color: @text;
+    position: relative;
+}
+
+.founder-container {
+    .container-custom();
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 4rem;
+    align-items: center;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    width: auto;
+
+    @media (max-width: @screen-lg) {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+}
+
+.founder-photo-column {
+    .photo-card {
+        position: relative;
+        border-radius: @radius-md;
+        overflow: hidden;
+        box-shadow: @shadow-lg;
+
+        img {
+            width: 100%;
+            max-height: 540px;
+            object-fit: cover;
+            display: block;
+            transition: @transition;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .gold-accent-border {
+            position: absolute;
+            inset: 12px;
+            border: 2px solid @gold;
+            border-radius: @radius-sm;
+            pointer-events: none;
+        }
+    }
+}
+
+.founder-info-column {
+    .badge-label {
+        display: inline-block;
+        color: @saffron;
+        font-weight: 600;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
+
+    .founder-title {
+        font-family: @font-heading;
+        font-size: clamp(1.75rem, 3vw, 2.4rem);
+        color: @dark;
+        line-height: 1.25;
+        margin-bottom: 1.25rem;
+    }
+
+    .founder-name-tag {
+        margin-bottom: 1.25rem;
+
+        h3 {
+            font-family: @font-heading;
+            font-size: 1.6rem;
+            color: @primary;
+        }
+
+        .designation {
+            font-size: 0.9rem;
+            color: @secondary;
+            font-weight: 600;
+        }
+    }
+
+    .founder-quote {
+        background: rgba(212, 175, 55, 0.08);
+        border-left: 4px solid @gold;
+        padding: 1rem 1.25rem;
+        border-radius: 0 @radius-sm @radius-sm 0;
+        margin-bottom: 1.25rem;
+        position: relative;
+
+        .quote-icon {
+            color: @gold;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        p {
+            font-family: @font-heading;
+            font-style: italic;
+            color: @dark;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    }
+
+    .bio-para {
+        font-size: 0.95rem;
+        color: @text-light;
+        line-height: 1.65;
+        margin-bottom: 1rem;
+    }
+}
+
+.founder-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1.75rem 0;
+
+    @media (max-width: @screen-md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .f-stat-card {
+        background: @cream;
+        border: 1px solid rgba(198, 138, 43, 0.3);
+        border-radius: @radius-sm;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        box-shadow: @shadow-sm;
+        transition: @transition;
+
+        &:hover {
+            transform: translateY(-3px);
+            border-color: @gold;
+        }
+
+        .f-num {
+            display: block;
+            font-family: @font-heading;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: @saffron;
+        }
+
+        .f-label {
+            font-size: 0.78rem;
+            color: @text-light;
+            font-weight: 500;
+        }
+    }
+}
+
+.founder-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .btn-founder-primary {
+        .btn-primary-style();
+    }
+
+    .btn-founder-call {
+        .btn-secondary-style();
+        background: transparent;
+        color: @primary;
+        border-color: @primary;
+
+        &:hover {
+            background: @primary;
+            color: @white;
+        }
+    }
+}
