@@ -5,26 +5,26 @@
             <i class="fa-solid fa-gopuram logo-icon"></i>
             <div class="brand-text">
                 <span class="company-name">{{ templeData.companyName }}</span>
-                <span class="company-subtext">Sacred Architecture</span>
+                <span class="company-subtext">आपकी आस्था, हमारा उत्कृष्ट निर्माण</span>
             </div>
         </a>
 
         <!-- Desktop Navigation -->
         <nav class="desktop-nav">
-            <a (click)="navigateTo('home')">Home</a>
-            <a (click)="navigateTo('about')">About Us</a>
-            <a (click)="navigateTo('founder')">Master Craftsman</a>
-            <a (click)="navigateTo('services')">Services</a>
-            <a (click)="navigateTo('gallery')">Gallery</a>
-            <a (click)="navigateTo('testimonials')">Testimonials</a>
-            <a (click)="navigateTo('location')">Location</a>
-            <a (click)="navigateTo('contact')">Contact</a>
+            <a (click)="navigateTo('home')">होम</a>
+            <a (click)="navigateTo('about')">हमारे बारे में</a>
+            <a (click)="navigateTo('founder')">संस्थापक</a>
+            <a (click)="navigateTo('services')">सेवाएं</a>
+            <a (click)="navigateTo('gallery')">गैलरी</a>
+            <a (click)="navigateTo('testimonials')">प्रतिक्रियाएं</a>
+            <a (click)="navigateTo('location')">स्थान</a>
+            <a (click)="navigateTo('contact')">संपर्क</a>
         </nav>
 
         <!-- CTA Action -->
         <div class="header-actions">
             <button (click)="openEnquiry()" class="btn-enquire">
-                <i class="fa-solid fa-om"></i> Enquire Now
+                <i class="fa-solid fa-om"></i> पूछताछ करें
             </button>
 
             <button (click)="toggleMobileMenu()" class="mobile-toggle" [attr.aria-expanded]="isMobileOpen()">
@@ -36,16 +36,16 @@
     <!-- Mobile Dropdown -->
     <div class="mobile-menu" [class.open]="isMobileOpen()">
         <nav>
-            <a (click)="navigateTo('home')"><i class="fa-solid fa-house"></i> Home</a>
-            <a (click)="navigateTo('about')"><i class="fa-solid fa-landmark"></i> About Us</a>
-            <a (click)="navigateTo('founder')"><i class="fa-solid fa-user-tie"></i> Master Craftsman</a>
-            <a (click)="navigateTo('services')"><i class="fa-solid fa-hammer"></i> Services</a>
-            <a (click)="navigateTo('gallery')"><i class="fa-solid fa-images"></i> Gallery</a>
-            <a (click)="navigateTo('testimonials')"><i class="fa-solid fa-comment-dots"></i> Testimonials</a>
-            <a (click)="navigateTo('location')"><i class="fa-solid fa-location-dot"></i> Visit Us</a>
-            <a (click)="navigateTo('contact')"><i class="fa-solid fa-phone"></i> Contact</a>
+            <a (click)="navigateTo('home')"><i class="fa-solid fa-house"></i> होम</a>
+            <a (click)="navigateTo('about')"><i class="fa-solid fa-landmark"></i> हमारे बारे में</a>
+            <a (click)="navigateTo('founder')"><i class="fa-solid fa-user-tie"></i> संस्थापक</a>
+            <a (click)="navigateTo('services')"><i class="fa-solid fa-hammer"></i> सेवाएं</a>
+            <a (click)="navigateTo('gallery')"><i class="fa-solid fa-images"></i> गैलरी</a>
+            <a (click)="navigateTo('testimonials')"><i class="fa-solid fa-comment-dots"></i> प्रतिक्रियाएं</a>
+            <a (click)="navigateTo('location')"><i class="fa-solid fa-location-dot"></i> स्थान</a>
+            <a (click)="navigateTo('contact')"><i class="fa-solid fa-phone"></i> संपर्क करें</a>
             <button (click)="openEnquiry(); toggleMobileMenu()" class="mobile-cta-btn">
-                Enquire Now
+                पूछताछ करें
             </button>
         </nav>
     </div>

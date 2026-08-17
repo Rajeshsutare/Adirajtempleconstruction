@@ -12,8 +12,8 @@ import { NavigationService } from '../../services/navigation.service';
       <div class="contact-container">
         <div class="contact-banner">
           <div class="banner-text">
-            <h2>Let's Build Something Sacred Together</h2>
-            <p>Reach out to discuss your temple vision, Vastu consultations, or structural estimations.</p>
+            <h2>आइए, मिलकर एक पवित्र मंदिर का निर्माण करें</h2>
+            <p>अपने मंदिर के सपने, वास्तु परामर्श या निर्माण संबंधी अनुमान पर चर्चा करने के लिए हमसे संपर्क करें ।</p>
           </div>
 
           <div class="banner-actions">
@@ -21,7 +21,7 @@ import { NavigationService } from '../../services/navigation.service';
               <i class="fa-solid fa-phone"></i> {{ templeData.formattedPhone }}
             </a>
             <button (click)="openModal()" class="btn-enquire">
-              <i class="fa-solid fa-envelope"></i> Send Direct Enquiry
+              <i class="fa-solid fa-envelope"></i> सीधे पूछताछ करें
             </button>
           </div>
         </div>
@@ -40,9 +40,13 @@ import { NavigationService } from '../../services/navigation.service';
             <i class="fa-brands fa-facebook-f"></i>
             <span>Facebook</span>
           </a>
-          <a [href]="templeData.socialLinks.twitter" target="_blank" class="social-card tw">
-            <i class="fa-brands fa-twitter"></i>
-            <span>Twitter</span>
+          <a [href]="templeData.socialLinks.youtube" target="_blank" class="social-card yt">
+            <i class="fa-brands fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+          <a [href]="templeData.socialLinks.pintrest" target="_blank" class="social-card tw">
+            <i class="fa-brands fa-pinterest"></i>
+            <span>Pinterest</span>
           </a>
         </div>
       </div>

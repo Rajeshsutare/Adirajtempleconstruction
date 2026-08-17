@@ -13,9 +13,9 @@ import { NavigationService } from '../../services/navigation.service';
       <div class="services-container">
         <!-- Section Header -->
         <div class="section-header-center">
-          <span class="section-badge"><i class="fa-solid fa-om"></i> Architectural Expertise</span>
-          <h2 class="section-title">Our Temple Construction Services</h2>
-          <p class="section-subtitle">From concept to completion, we bring your sacred vision to life.</p>
+          <span class="section-badge"><i class="fa-solid fa-om"></i> वास्तुशिल्प विशेषज्ञता</span>
+          <h2 class="section-title">हमारी सेवाएं:</h2>
+          <p class="section-subtitle">कल्पना से पूर्णता तक, हम आपके पवित्र सपने को साकार करते हैं।</p>
         </div>
 
         <!-- Responsive Card Grid -->
@@ -39,7 +39,7 @@ import { NavigationService } from '../../services/navigation.service';
               </ul>
 
               <button (click)="openEnquiry(item.title)" class="btn-card-enquire">
-                Learn More / Enquire <i class="fa-solid fa-chevron-right"></i>
+                और जानें / पूछताछ करें <i class="fa-solid fa-chevron-right"></i>
               </button>
             </div>
           </div>

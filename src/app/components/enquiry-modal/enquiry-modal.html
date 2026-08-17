@@ -9,11 +9,11 @@
         <div class="modal-header">
             <i class="fa-solid fa-om modal-icon"></i>
 
-            <h2>Temple Construction Enquiry</h2>
+            <h2>मंदिर निर्माण संबंधी पूछताछ</h2>
 
             <p>
-                Fill out the details below for a customized architectural blueprint
-                &amp; cost estimate.
+                नीचे दिए गए विवरण भरें ताकि आपके लिए एक अनुकूलित वास्तुशिल्पीय नक्शा तैयार किया जा सके।
+                &amp; लागत का अनुमान |
             </p>
         </div>
 
@@ -34,50 +34,50 @@
 
             <!-- Full Name -->
             <div class="form-group">
-                <label for="name">Full Name *</label>
+                <label for="name">पूरा नाम*</label>
 
                 <input id="name" type="text" formControlName="name" placeholder="e.g. Shri Rajesh Varma"
                     [class.invalid]="isFieldInvalid('name')" />
 
                 <span *ngIf="isFieldInvalid('name')" class="err-text">
-                    Full name is required.
+                    पूरा नाम आवश्यक है.
                 </span>
             </div>
 
             <!-- Email -->
             <div class="form-group">
-                <label for="email">Email Address *</label>
+                <label for="email">ईमेल *</label>
 
                 <input id="email" type="email" formControlName="email" placeholder="e.g. rajesh@example.com"
                     [class.invalid]="isFieldInvalid('email')" />
 
                 <span *ngIf="isFieldInvalid('email')" class="err-text">
-                    Enter a valid email address.
+                    कृपया एक वैध ईमेल पता दर्ज करें.
                 </span>
             </div>
 
             <!-- Phone -->
             <div class="form-group">
-                <label for="phone">Contact Number (10 Digits) *</label>
+                <label for="phone">मोबाइल नंबर (10-अंकीय) *</label>
 
                 <input id="phone" type="tel" formControlName="phone" placeholder="e.g. 9763101558"
                     [class.invalid]="isFieldInvalid('phone')" />
 
                 <span *ngIf="isFieldInvalid('phone')" class="err-text">
-                    Enter a valid 10-digit mobile number.
+                    कृपया एक वैध 10-अंकीय मोबाइल नंबर दर्ज करें.
                 </span>
             </div>
 
             <!-- Description -->
             <div class="form-group">
-                <label for="description">Requirements / Vision *</label>
+                <label for="description">आवश्यकताएं *</label>
 
                 <textarea id="description" rows="4" formControlName="description"
-                    placeholder="Please describe your temple project location, dimensions, preferred stone type, and expected timeline..."
+                    placeholder="कृपया अपने मंदिर प्रोजेक्ट की स्थिति, आयाम, पसंदीदा पत्थर के प्रकार और अपेक्षित समय सूचीबद्ध करें..."
                     [class.invalid]="isFieldInvalid('description')"></textarea>
 
                 <span *ngIf="isFieldInvalid('description')" class="err-text">
-                    Please describe your requirements.
+                    कृपया अपनी आवश्यकताएं बताएं.
                 </span>
             </div>
 
@@ -85,12 +85,12 @@
             <button type="submit" [disabled]="isSubmitting()" class="btn-submit">
                 <span *ngIf="!isSubmitting()">
                     <i class="fa-solid fa-paper-plane"></i>
-                    Send Enquiry
+                    पूछताछ भेजें
                 </span>
 
                 <span *ngIf="isSubmitting()">
                     <i class="fa-solid fa-spinner fa-spin"></i>
-                    Sending...
+                    भेज रहे हैं...
                 </span>
             </button>
         </form>
