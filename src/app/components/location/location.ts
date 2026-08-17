@@ -11,9 +11,9 @@ import { TEMPLE_DATA } from '../../data/temple-data';
     <section id="location" class="location-section">
       <div class="location-container">
         <div class="section-header-center">
-          <span class="section-badge"><i class="fa-solid fa-om"></i> Physical Office</span>
-          <h2 class="section-title">Visit Our Studio</h2>
-          <p class="section-subtitle">We would be happy to discuss your temple project in person.</p>
+          <span class="section-badge"><i class="fa-solid fa-om"></i> कार्यालय</span>
+          <h2 class="section-title">हमारे कार्यालय में पधारें</h2>
+          <p class="section-subtitle">हमें आपके मंदिर निर्माण प्रोजेक्ट पर आपसे व्यक्तिगत रूप से चर्चा करने में खुशी होगी।</p>
         </div>
 
         <div class="location-grid">
@@ -33,12 +33,12 @@ import { TEMPLE_DATA } from '../../data/temple-data';
 
           <!-- Info Box -->
           <div class="info-card">
-            <h3>Contact Details</h3>
+            <h3>संपर्क विवरण</h3>
 
             <div class="info-item">
               <i class="fa-solid fa-location-dot"></i>
               <div>
-                <strong>Address</strong>
+                <strong>पता</strong>
                 <p>{{ templeData.address }}</p>
               </div>
             </div>
@@ -46,7 +46,7 @@ import { TEMPLE_DATA } from '../../data/temple-data';
             <div class="info-item">
               <i class="fa-solid fa-phone"></i>
               <div>
-                <strong>Phone Number</strong>
+                <strong>फ़ोन नंबर</strong>
                 <p><a [href]="'tel:' + templeData.phone">{{ templeData.formattedPhone }}</a></p>
               </div>
             </div>
@@ -54,7 +54,7 @@ import { TEMPLE_DATA } from '../../data/temple-data';
             <div class="info-item">
               <i class="fa-solid fa-envelope"></i>
               <div>
-                <strong>Email Address</strong>
+                <strong>ईमेल पता Address</strong>
                 <p><a [href]="'mailto:' + templeData.email">{{ templeData.email }}</a></p>
               </div>
             </div>
@@ -62,13 +62,13 @@ import { TEMPLE_DATA } from '../../data/temple-data';
             <div class="info-item">
               <i class="fa-solid fa-clock"></i>
               <div>
-                <strong>Working Hours</strong>
+                <strong>कार्य समय</strong>
                 <p>{{ templeData.workingHours }}</p>
               </div>
             </div>
 
             <a [href]="templeData.googleMapsUrl" target="_blank" rel="noopener noreferrer" class="btn-directions">
-              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+              <i class="fa-solid fa-diamond-turn-right"></i> दिशा-निर्देश प्राप्त करें
             </a>
           </div>
         </div>

@@ -12,8 +12,8 @@ import { GalleryItem } from '../../model/temple-models';
       <div class="gallery-container">
         <div class="section-header-center">
           <span class="section-badge"><i class="fa-solid fa-om"></i> Portfolio</span>
-          <h2 class="section-title">Our Temple Creations</h2>
-          <p class="section-subtitle">Every structure tells a story of faith, craftsmanship and devotion.</p>
+          <h2 class="section-title">हमारे मंदिर निर्माण</h2>
+          <p class="section-subtitle">हर संरचना आस्था, शिल्पकला और भक्ति की एक कहानी कहती है।</p>
         </div>
 
         <!-- Category Filters -->
@@ -66,12 +66,12 @@ export class GalleryComponent {
   activeLightboxItem = signal<GalleryItem | null>(null);
 
   categories = [
-    { key: 'all', label: 'All Projects' },
-    { key: 'construction', label: 'Construction' },
-    { key: 'architecture', label: 'Architecture' },
-    { key: 'stonework', label: 'Stone Work' },
-    { key: 'sculptures', label: 'Sculptures' },
-    { key: 'completed', label: 'Completed' }
+    { key: 'all', label: 'सभी प्रोजेक्ट' },
+    { key: 'construction', label: 'निर्माण' },
+    { key: 'architecture', label: 'वास्तुकला' },
+    { key: 'stonework', label: 'पत्थर कार्य' },
+    { key: 'sculptures', label: 'मूर्तियाँ' },
+    { key: 'completed', label: 'पूर्ण' }
   ];
 
   setCategory(key: string): void {

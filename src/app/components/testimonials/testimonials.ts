@@ -10,9 +10,9 @@ import { TESTIMONIALS_DATA } from '../../data/temple-data';
     <section id="testimonials" class="testimonials-section">
       <div class="testimonials-container">
         <div class="section-header-center">
-          <span class="section-badge"><i class="fa-solid fa-om"></i> Devotee & Client Trust</span>
-          <h2 class="section-title">What Our Clients Say</h2>
-          <p class="section-subtitle">Read reviews from trustees and visionaries who built with us.</p>
+          <span class="section-badge"><i class="fa-solid fa-om"></i> भक्तों और ग्राहकों का विश्वास</span>
+          <h2 class="section-title">हमारे ग्राहक हमारे बारे में क्या कहते हैं</h2>
+          <p class="section-subtitle">उन ट्रस्टियों और दूरदर्शी लोगों की समीक्षाएँ पढ़ें, जिन्होंने हमारे साथ अपने मंदिर का निर्माण कराया।</p>
         </div>
 
         <div class="testimonial-card">

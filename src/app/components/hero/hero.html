@@ -1,1 +1,54 @@
-<p>hero works!</p>
+<section class="hero-section" id="home">
+
+    <div class="hero-background" aria-hidden="true">
+        <img src="../../../../public/hero.jpeg" alt="" fetchpriority="high" />
+    </div>
+
+
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+
+    <div class="hero-container">
+
+        <div class="decorative-badge">
+            <i class="fa-solid fa-om"></i>
+            <span>आदिराज टेम्पल कन्स्ट्रकशन में आपका स्वागत है!</span>
+        </div>
+
+        <h1 class="hero-title">
+            अब अपने सपनों का मंदिर बनवाइए
+            <span class="gold-text"> पूरे भारत में मंदिर निर्माण सेवा उपलब्ध !</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            {{ templeData.subtitle }}
+        </p>
+
+        <p class="hero-tagline">
+            पवित्र संकल्प से भव्य वास्तुकला तक।
+        </p>
+
+        <div class="hero-cta-group">
+
+            <button type="button" class="btn-hero-primary" (click)="openEnquiry()">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>संपर्क करें</span>
+            </button>
+
+            <button type="button" class="btn-hero-secondary" (click)="scrollToGallery()">
+                <i class="fa-solid fa-images"></i>
+                <span>हमारी सेवाएं</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <button type="button" class="scroll-indicator" (click)="scrollToAbout()" aria-label="Scroll to About section">
+        <span>Scroll to Explore</span>
+
+        <i class="fa-solid fa-chevron-down animate-bounce"></i>
+    </button>
+
+</section>

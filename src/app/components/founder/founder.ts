@@ -20,10 +20,10 @@ import { CONTRACTOR_DATA, TEMPLE_DATA } from '../../data/temple-data';
 
         <!-- Right Side Bio & Stats -->
         <div class="founder-info-column">
-          <div class="badge-label">Meet Our Expert</div>
+          <div class="badge-label">हमारे विशेषज्ञ से मिलिए</div>
           
           <h2 class="founder-title">
-            The Craftsman Behind Every Sacred Structure
+            हर पवित्र संरचना के पीछे एक कुशल शिल्पकार
           </h2>
 
           <div class="founder-name-tag">
@@ -43,33 +43,33 @@ import { CONTRACTOR_DATA, TEMPLE_DATA } from '../../data/temple-data';
           <div class="founder-stats-grid">
             <div class="f-stat-card">
               <span class="f-num">{{ contractor.experience }}</span>
-              <span class="f-label">Years of Experience</span>
+              <span class="f-label">वर्षों का अनुभव</span>
             </div>
 
             <div class="f-stat-card">
               <span class="f-num">{{ contractor.templesConstructed }}</span>
-              <span class="f-label">Temples Constructed</span>
+              <span class="f-label">मंदिर निर्माण</span>
             </div>
 
             <div class="f-stat-card">
               <span class="f-num">{{ contractor.happyClients }}</span>
-              <span class="f-label">Satisfied Clients</span>
+              <span class="f-label">संतुष्ट ग्राहक</span>
             </div>
 
             <div class="f-stat-card">
               <span class="f-num">{{ contractor.artisans }}</span>
-              <span class="f-label">Master Artisans</span>
+              <span class="f-label">मास्टर शिल्पकार</span>
             </div>
           </div>
 
           <!-- CTA Buttons -->
           <div class="founder-cta-group">
             <button (click)="openEnquiry()" class="btn-founder-primary">
-              <i class="fa-solid fa-comments"></i> Discuss Your Temple Project
+              <i class="fa-solid fa-comments"></i> अपने मंदिर निर्माण प्रोजेक्ट पर चर्चा करें
             </button>
 
             <a [href]="'tel:' + templeData.phone" class="btn-founder-call">
-              <i class="fa-solid fa-phone"></i> Call Now
+              <i class="fa-solid fa-phone"></i> कॉल करें
             </a>
           </div>
         </div>
