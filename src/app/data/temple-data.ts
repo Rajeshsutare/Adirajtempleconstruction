@@ -30,9 +30,9 @@ export const TEMPLE_DATA = {
 };
 
 export const CONTRACTOR_DATA = {
-    name: 'मन्मथ पाटील',
+    name: 'कॉन्ट्रॅक्टर मन्मथ रघुनाथराव पाटील',
     designation: 'संस्थापक एवं मुख्य मंदिर वास्तुकार',
-    photo: 'profile.png',
+    photo: 'profile.jpeg',
     experience: '22+',
     templesConstructed: '108+',
     happyClients: '500+',
@@ -53,8 +53,7 @@ export const SERVICES_DATA: ServiceItem[] = [
 
         icon: 'fa-compass-drafting',
 
-        image:
-            'https://media.istockphoto.com/id/883412924/photo/shri-manshapurna-karni-mata-temple-in-udaipur-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=E3yXtr8HYfpRaI4Y18O9bYn3MOW-kssKpEkPDUlV7kE=',
+        image: 'hero.jpeg',
 
         features: [
             'वास्तु शास्त्र के अनुरूप डिजाइन',
@@ -73,8 +72,7 @@ export const SERVICES_DATA: ServiceItem[] = [
 
         icon: 'fa-gopuram',
 
-        image:
-            'https://plus.unsplash.com/premium_photo-1697730116501-72f5749dffce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHR1cm5rZXklMjB0ZW1wbGUlMjBjb25zdHJ1Y3Rpb258ZW58MHx8MHx8fDA%3D',
+        image: 'p23.jpeg',
 
         features: [
             'सटीक इंटरलॉकिंग स्टोन जॉइनरी',
@@ -93,8 +91,7 @@ export const SERVICES_DATA: ServiceItem[] = [
 
         icon: 'fa-hammer',
 
-        image:
-            'https://media.istockphoto.com/id/2280008846/photo/hindu-temple-with-bamboo-scaffolding-under-renovation.webp?a=1&b=1&s=612x612&w=0&k=20&c=A3-0nVLyOuRNddCsDKofG_-b6LIzXMxOHeGNjDPsZQo=',
+        image: 'p25.jpeg',
 
         features: [
             'गुलाबी बलुआ पत्थर एवं सफेद संगमरमर की नक्काशी',
