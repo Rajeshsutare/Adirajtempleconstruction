@@ -27,9 +27,11 @@ import { CONTRACTOR_DATA, TEMPLE_DATA } from '../../data/temple-data';
           </h2>
 
           <div class="founder-name-tag">
-            <h3>{{ contractor.name }}</h3>
-            <span class="designation">{{ contractor.designation }}</span>
-          </div>
+            <h3>{{ contractor.name }}
+              </h3>
+              <h4><i class="fa-solid fa-phone"></i> <a style="text-decoration: none;" [href]="'tel:' + templeData.phone">{{ templeData.formattedPhone }}</a></h4>
+            </div>
+            <p class="designation">{{ contractor.designation }}</p>
 
           <blockquote class="founder-quote">
             <i class="fa-solid fa-quote-left quote-icon"></i>
