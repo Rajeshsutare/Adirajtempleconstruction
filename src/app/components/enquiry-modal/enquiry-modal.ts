@@ -42,23 +42,48 @@ export class EnquiryModalComponent {
       return;
     }
 
+    if (this.isSubmitting()) {
+      return;
+    }
+
     this.isSubmitting.set(true);
     this.submitStatus.set('idle');
+    this.statusMessage.set('');
 
-    const result = await this.emailService.sendEnquiry({
-      ...this.enquiryForm.value,
-      serviceInterest: this.navService.selectedServiceForModal() || 'General Temple Project'
-    });
+    try {
+      const formValue = this.enquiryForm.getRawValue();
 
-    this.isSubmitting.set(false);
+      const result = await this.emailService.sendEnquiry({
+        name: formValue.name.trim(),
+        email: formValue.email.trim(),
+        phone: formValue.phone.trim(),
+        description: formValue.description.trim(),
+        serviceInterest:
+          this.navService.selectedServiceForModal() ||
+          'General Temple Project'
+      });
 
-    if (result.success) {
-      this.submitStatus.set('success');
-      this.statusMessage.set(result.message);
-      this.enquiryForm.reset();
-    } else {
+      if (result.success) {
+        this.submitStatus.set('success');
+        this.statusMessage.set(result.message);
+
+        this.enquiryForm.reset();
+      } else {
+        this.submitStatus.set('error');
+        this.statusMessage.set(result.message);
+      }
+
+    } catch (error) {
+      console.error('Enquiry submission failed:', error);
+
       this.submitStatus.set('error');
-      this.statusMessage.set(result.message);
+
+      this.statusMessage.set(
+        'Unable to send your enquiry. Please try again.'
+      );
+
+    } finally {
+      this.isSubmitting.set(false);
     }
   }
 

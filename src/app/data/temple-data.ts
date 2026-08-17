@@ -6,7 +6,7 @@ export const TEMPLE_DATA = {
     subtitle: 'सभी प्रकार के भारतीय मंदीर, शिखर,गुंबज,चोटी,सुरई,डोम, गुमट,महाद्वार बनाने हेतु संपर्क कीजिए कॉन्टॅक्टर पाटील बंधू ',
     phone: '+919763101558',
     formattedPhone: '+91 9763101558',
-    email: 'aadirajtempleconstruction@gmail.com',
+    email: 'adirajtempleconstructions@gmail.com',
     address: 'लांडगेवाडी, महाराष्ट्र ४३१७०८, भारत',
     workingHours: 'Every Day: 9:00 AM - 7:00 PM IST',
 
@@ -22,10 +22,10 @@ export const TEMPLE_DATA = {
     },
 
     emailJsConfig: {
-        serviceId: 'service_mandir_nirman',
-        contractorTemplateId: 'template_contractor_notify',
-        clientTemplateId: 'template_client_autoreply',
-        publicKey: 'YOUR_EMAILJS_PUBLIC_KEY'
+        serviceId: 'service_u40lroq',
+        contractorTemplateId: 'template_jvor6td',
+        clientTemplateId: 'template_uv2km8n',
+        publicKey: 'Zpgl5JSEzthFDW337'
     }
 };
 

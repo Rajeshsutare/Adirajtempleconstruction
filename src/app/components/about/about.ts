@@ -13,7 +13,7 @@ import { NavigationService } from '../../services/navigation.service';
         <div class="about-image-wrapper">
           <div class="image-frame">
             <img 
-              src="https://images.unsplash.com/photo-1661446569716-86e93bf267d3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8VHJhZGl0aW9uYWwlMjBUZW1wbGUlMjBDYXJ2aW5nJTIwQ3JhZnRzbWFufGVufDB8fDB8fHww" 
+              src="p26.jpeg" 
               alt="Traditional Temple Carving Craftsman" 
               loading="lazy"
             />
