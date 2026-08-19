@@ -38,3 +38,10 @@ export interface EmailPayload {
     description: string;
     serviceInterest?: string;
 }
+export interface certificates {
+    id: string,
+    location: string,
+    title: string,
+    description: string,
+    imageUrl: string
+}

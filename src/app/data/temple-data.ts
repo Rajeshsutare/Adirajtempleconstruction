@@ -1,4 +1,4 @@
-import { ServiceItem, GalleryItem, TestimonialItem } from '../model/temple-models';
+import { ServiceItem, GalleryItem, TestimonialItem, certificates } from '../model/temple-models';
 
 export const TEMPLE_DATA = {
     companyName: 'Adiraj Temple Construction',
@@ -27,7 +27,24 @@ export const TEMPLE_DATA = {
         clientTemplateId: 'template_uv2km8n',
         publicKey: 'Zpgl5JSEzthFDW337'
     }
+
 };
+export const CERTIFICATE_DATA: certificates[] = [
+    {
+        id: 'c1',
+        location: 'Maharashtra',
+        title: 'मंदिर निर्माण के लिए प्रमाणपत्र',
+        description: 'हमारे मंदिर निर्माण कार्यों के लिए प्रमाणपत्र',
+        imageUrl: 'certificate-1.jpeg'
+    },
+    {
+        id: 'c1',
+        location: 'Maharashtra',
+        title: 'मंदिर निर्माण के लिए प्रमाणपत्र',
+        description: 'हमारे मंदिर निर्माण कार्यों के लिए प्रमाणपत्र',
+        imageUrl: 'certificate-2.jpeg'
+    },
+]
 
 export const CONTRACTOR_DATA = {
     name: 'कॉन्ट्रॅक्टर मन्मथ रघुनाथराव पाटील',

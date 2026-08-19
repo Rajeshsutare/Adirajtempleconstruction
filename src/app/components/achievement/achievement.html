@@ -1,0 +1,24 @@
+<section class="achievement">
+    <div class="container">
+        <div class="achievement__content">
+
+            <h2 class="achievement__title">
+                सराहना और उपलब्धियाँ
+            </h2>
+
+            <p class="achievement__description">
+                हमें अपनी उपलब्धियों और वर्षों के दौरान हासिल किए गए महत्वपूर्ण पड़ावों पर गर्व है। यहाँ हमारी कुछ
+                उल्लेखनीय उपलब्धियाँ प्रस्तुत हैं:
+            </p>
+
+            <div class="achievement__cards">
+                @for (certificate of certificates; track certificate.title) {
+                <div class="achievement__card">
+                    <img [src]="certificate.imageUrl" [alt]="certificate.title" class="achievement__image" />
+                </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -12,6 +12,7 @@ import { HeroComponent } from './components/hero/hero';
 import { LocationComponent } from './components/location/location';
 import { ServicesComponent } from './components/services/services';
 import { TestimonialsComponent } from './components/testimonials/testimonials';
+import { AchievementComponent } from './components/achievement/achievement';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,8 @@ import { TestimonialsComponent } from './components/testimonials/testimonials';
     ContactComponent,
     FooterComponent,
     EnquiryModalComponent,
-    FloatingActionsComponent
+    FloatingActionsComponent,
+    AchievementComponent
   ],
   template: `
     <app-header></app-header>
@@ -37,6 +39,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials';
       <app-hero></app-hero>
       <app-about></app-about>
       <app-founder></app-founder>
+      <app-achievement></app-achievement>
       <app-services></app-services>
       <app-gallery></app-gallery>
       <app-testimonials></app-testimonials>
